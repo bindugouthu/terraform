@@ -7,6 +7,13 @@ pipeline{
 				sh 'echo "terraform start....!"'
 			}
 		}
+		stage('Remove folder'){
+			steps{
+				sh 'cd /var/lib/jenkins/workspace/terraform-pipeline'
+				sh 'rm -rf *'
+				sh 'echo "Remove folder....!"'
+			}
+		}
 
 		stage('Git clone'){
 			steps{
