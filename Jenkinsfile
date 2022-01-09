@@ -24,17 +24,17 @@ pipeline{
 		}
 		stage('terraform init'){
 			steps{
-			sh 'cd /var/lib/jenkins/workspace/terraform-pipeline && terraform init'
+			sh 'cd /var/lib/jenkins/workspace/terraform-pipeline/terraform && terraform init'
 			}
 		}
 		stage('terraform plan'){
 			steps{
-			sh 'cd /var/lib/jenkins/workspace/terraform-pipeline && terraform plan'
+			sh 'cd /var/lib/jenkins/workspace/terraform-pipeline/terraform && terraform plan'
 			}
 		}
 		stage('terraform apply'){
 			steps{
-			sh 'cd /var/lib/jenkins/workspace/terraform-pipeline && terraform apply -auto-approve'
+			sh 'cd /var/lib/jenkins/workspace/terraform-pipeline/terraform && terraform apply -auto-approve'
 			}
 		}
 	
