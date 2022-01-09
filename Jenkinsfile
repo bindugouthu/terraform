@@ -11,7 +11,8 @@ pipeline{
 		stage('Git clone'){
 			steps{
 				sh 'git clone https://github.com/bindugouthu/terraform.git'
-					sh 'cd /var/lib/jenkins/workspace/secondjob/devops/hasipcorp'
+					
+				
 			}
 		}
 	}	
