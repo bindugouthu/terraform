@@ -13,7 +13,7 @@ resource "aws_security_group" "sg" {
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-    description      = "ssh from anywhere"
+    description      = "ssh from anywhere..."
   }
 
   egress {
