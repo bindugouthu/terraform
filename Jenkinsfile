@@ -39,10 +39,9 @@ pipeline{
 		stage('dev to main merge'){
 			steps{
 			git checkout main
-			git merge origin/develop
+			git merge develop
 			}
 		}
-		}
-	
+		
 	}	
 }
