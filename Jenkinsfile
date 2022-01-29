@@ -1,15 +1,15 @@
 pipeline{
     agent any
 	stages {
-		stage('dev to main merge'){
+		stage('git clone'){
 			steps{
 			sh 'git clone https://github.com/bindugouthu/terraform.git'
 			}
 		}
 		stage('dev to main merge'){
 			steps{
-			git checkout main
-			git merge develop
+			git checkout -b main
+			git merge origin/develop
 			}
 		}
 	}	
