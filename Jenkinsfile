@@ -36,6 +36,11 @@ pipeline{
 			steps{
 			sh 'cd /var/lib/jenkins/workspace/terraform-pipeline/terraform && terraform apply -auto-approve'
 			}
+		stage('dev to main merge'){
+			steps{
+			git checkout main
+			git merge origin/develop
+			}
 		}
 	
 	}	
