@@ -1,4 +1,3 @@
-
 pipeline{
     agent any
 	stages {
@@ -42,6 +41,5 @@ pipeline{
 			git merge develop
 			}
 		}
-		
 	}	
-}
+	}	
